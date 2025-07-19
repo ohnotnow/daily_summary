@@ -24,25 +24,25 @@ jobs:
         run: echo "TAG_NAME=${GITHUB_REF##*/}" >> $GITHUB_ENV
 
       - name: Build macOS ARM binary
-        run: GOOS=darwin GOARCH=arm64 go build -ldflags="-s -w" -o gepetto-mac-arm-${{ env.TAG_NAME }} gepetto.go
+        run: GOOS=darwin GOARCH=arm64 go build -ldflags="-s -w" -o dailysummary-mac-arm-${{ env.TAG_NAME }} dailysummary.go
 
       - name: Build macOS Intel binary
-        run: GOOS=darwin GOARCH=amd64 go build -ldflags="-s -w" -o gepetto-mac-intel-${{ env.TAG_NAME }} gepetto.go
+        run: GOOS=darwin GOARCH=amd64 go build -ldflags="-s -w" -o dailysummary-mac-intel-${{ env.TAG_NAME }} dailysummary.go
 
       - name: Build Linux Intel binary
-        run: GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" -o gepetto-linux-intel-${{ env.TAG_NAME }} gepetto.go
+        run: GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" -o dailysummary-linux-intel-${{ env.TAG_NAME }} dailysummary.go
 
       - name: Build Windows binary
-        run: GOOS=windows GOARCH=amd64 go build -ldflags="-s -w" -o gepetto-windows-${{ env.TAG_NAME }}.exe gepetto.go
+        run: GOOS=windows GOARCH=amd64 go build -ldflags="-s -w" -o dailysummary-windows-${{ env.TAG_NAME }}.exe dailysummary.go
 
       - name: Create Release and Upload Binaries
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            gepetto-mac-arm-${{ env.TAG_NAME }}
-            gepetto-mac-intel-${{ env.TAG_NAME }}
-            gepetto-linux-intel-${{ env.TAG_NAME }}
-            gepetto-windows-${{ env.TAG_NAME }}.exe
+            dailysummary-mac-arm-${{ env.TAG_NAME }}
+            dailysummary-mac-intel-${{ env.TAG_NAME }}
+            dailysummary-linux-intel-${{ env.TAG_NAME }}
+            dailysummary-windows-${{ env.TAG_NAME }}.exe
           tag_name: ${{ env.TAG_NAME }}
           draft: false
           prerelease: false
