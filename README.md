@@ -28,20 +28,6 @@ brew install go fd
 # mdls is pre-installed on macOS
 ```
 
-Ubuntu / Debian
-```
-sudo apt update
-sudo apt install -y golang fd-find
-# Note: macOS’s `mdls` is not available on Linux; file metadata gathering is limited.
-```
-
-Windows (PowerShell + Scoop or Chocolatey)
-```
-# With Chocolatey
-choco install golang fd
-# mdls is not available; metadata gathering is limited.
-```
-
 ## Installation
 
 1. Clone the repository:
