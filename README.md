@@ -9,9 +9,13 @@ A command-line tool that inspects your recent file activity and uses the OpenAI 
 - Builds a structured prompt and sends it to OpenAI’s Chat Completions API.
 - Prints a human-readable summary highlighting projects, tools, and notable activities.
 
+## Binaries
+
+Pre-built binaries for macOS, Linux, and Windows are available on the [Releases](https://github.com/ohnotnow/daily_summary/releases) page.
+
 ## Prerequisites
 
-- Go 1.18 or later  
+- Go 1.18 or later (if self-compiling) 
 - OpenAI API key (set via `OPENAI_API_KEY`)  
 - `fd` (a simple, fast and user-friendly alternative to `find`)  
 - **macOS only:** `mdls` (built into macOS; used to read file metadata)
