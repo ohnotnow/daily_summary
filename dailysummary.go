@@ -94,6 +94,8 @@ Your task is to analyse this data and provide a concise, insightful summary of w
 5. Avoid referring to the user by name, even if it appears in file paths. The user is running this themselves - so if a personal reference is needed then use "you"
 6. You should not mention system-level files, app caches, media libraries, or operating system internals such as Apple TV databases, unless they clearly represent user-driven activity.
 
+Critical: Your response must be well structured and valid Markdown.  It will be piped directly to the "glow" cli tool so anything else will cause an error.
+
 Here is the file activity data (in JSON):
 
 `
