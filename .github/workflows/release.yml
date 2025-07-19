@@ -39,7 +39,7 @@ jobs:
         run: GOOS=windows GOARCH=amd64 go build -ldflags="-s -w" -o dailysummary-windows-${{ env.TAG_NAME }}.exe dailysummary.go
 
       - name: Create Release and Upload Binaries
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2.3.2
         with:
           files: |
             dailysummary-mac-arm-${{ env.TAG_NAME }}
