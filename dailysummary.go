@@ -133,7 +133,7 @@ func main() {
 	var since int
 	var model string
 	flag.IntVar(&since, "since-hours", 12, "Number of hours back to include file changes")
-	flag.StringVar(&model, "model", "gpt-4o", "OpenAI model to use")
+	flag.StringVar(&model, "model", "o4-mini", "OpenAI model to use")
 	flag.Parse()
 
 	apiKey := os.Getenv("OPENAI_API_KEY")

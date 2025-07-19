@@ -66,7 +66,7 @@ go run dailysummary.go [flags]
   Number of hours back to include file changes (default: `12`).
 
 - `--model`  
-  OpenAI model to use (default: `gpt-4o`).
+  OpenAI model to use (default: `4o-mini`).
 
 ### Example
 
